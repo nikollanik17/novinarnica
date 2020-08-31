@@ -19,6 +19,11 @@ import Vise from "../screens/Vise";
 import BooksCategory from "../screens/BooksCategory";
 import SingleBook from "../screens/SingleBook";
 
+import NewspaperIc from "../components/icons/NewspaperIc";
+import BookIc from "../components/icons/BookIc";
+import DownloadIc from "../components/icons/DownloadIc";
+import MoreIc from "../components/icons/MoreIc";
+
 const Stack = createStackNavigator();
 const BooksStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -212,19 +217,20 @@ const TabNavigation = () => {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName = "newspaper";
             let tabName = "NOVINE";
-            let IconType = FontAwesome5;
+            let IconType = NewspaperIc;
 
             if (route.name === "BooksNav") {
               iconName = "book";
               tabName = "KNJIGE";
+              IconType = BookIc;
             } else if (route.name === "PREUZETO") {
               iconName = "download";
               tabName = "PREUZETO";
-              IconType = AntDesign;
+              IconType = DownloadIc;
             } else if (route.name === "VISE") {
               iconName = "dots-horizontal";
               tabName = "VIŠE";
-              IconType = MaterialCommunityIcons;
+              IconType = MoreIc;
             }
             let tabComp = (
               <View
@@ -253,9 +259,10 @@ const TabNavigation = () => {
                 }
               >
                 <IconType
-                  name={iconName}
-                  size={25}
-                  color={focused ? "#292929" : "#eee"}
+                  // name={iconName}
+                  // size={25}
+                  // color={focused ? "#292929" : "#eee"}
+                  active={focused ? true : false}
                 />
                 <Text
                   style={
