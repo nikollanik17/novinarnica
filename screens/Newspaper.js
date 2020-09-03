@@ -27,7 +27,7 @@ const Newspaper = (props) => {
       >
         <ScrollView>
           <View>
-            <ScrollView horizontal style={styles.categories}>
+            <ScrollView horizontal style={styles.categories} showsHorizontalScrollIndicator={false} >
               {/* <TouchableOpacity
               onPress={() => {
                 props.navigation.navigate("NewspaperCategory", {
@@ -86,7 +86,7 @@ const Newspaper = (props) => {
               </View>
             </View> */}
             <PurpleCategoryName name="BESPLATNE" />
-            <ScrollView horizontal>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               {/* <View
                 style={{
                   margin: 10,
@@ -141,7 +141,7 @@ const Newspaper = (props) => {
           </View>
           <View style={styles.singleCategory}>
             <PurpleCategoryName name="DNEVNE" />
-            <ScrollView horizontal>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <NewspaperComponent
                 pressed={() => {
                   props.navigation.navigate("SingleNewspaper", {

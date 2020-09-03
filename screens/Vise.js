@@ -7,13 +7,14 @@ import {
   ScrollView,
   ImageBackground,
 } from "react-native";
-import {
-  EvilIcons,
-  Feather,
-  FontAwesome,
-  FontAwesome5,
-  Entypo,
-} from "@expo/vector-icons";
+import LanguageIcon from '../components/icons/LanguageIcon';
+import CountriesIcon from '../components/icons/CountriesIcon';
+import HeartFilledIcon from '../components/icons/HeartFilledIcon';
+import MarkerIcon from '../components/icons/MarkerIcon';
+import CoinsIcon from '../components/icons/CoinsIcon';
+import GiftIcon from '../components/icons/GiftIcon';
+import InfoIcon from '../components/icons/InfoIcon';
+import LoginIcon from '../components/icons/LoginIcon';
 
 const Vise = (props) => {
   return (
@@ -22,86 +23,51 @@ const Vise = (props) => {
         <View style={styles.optionsContainer}>
           <View style={styles.option}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <EvilIcons
-                name="location"
-                size={35}
-                color="#000"
-                style={styles.icon}
-              />
+              <CountriesIcon style={styles.icon} />
               <Text style={styles.optionText}>Zemlje</Text>
             </View>
-            <Feather name="chevron-down" size={30} color="#ccc" />
+            {/* <Feather name="chevron-down" size={30} color="#ccc" /> */}
           </View>
           <View style={styles.option}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <FontAwesome
-                name="language"
-                size={30}
-                color="#8e384d"
-                style={styles.icon}
-              />
+              <LanguageIcon style={styles.icon} />
               <Text style={styles.optionText}>Jezik</Text>
             </View>
-            <Feather name="chevron-down" size={30} color="#ccc" />
+            {/* <Feather name="chevron-down" size={30} color="#ccc" /> */}
           </View>
           <View style={styles.option}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <FontAwesome
-                name="heart"
-                size={27}
-                color="#E44545"
-                style={styles.icon}
-              />
+              <HeartFilledIcon style={styles.icon} />
               <Text style={styles.optionText}>Omiljeno</Text>
             </View>
           </View>
           <View style={styles.option}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <FontAwesome
-                name="bookmark"
-                size={27}
-                color="#7B369B"
-                style={styles.icon}
-              />
+              <MarkerIcon style={styles.icon} />
               <Text style={styles.optionText}>Markeri</Text>
             </View>
           </View>
           <View style={styles.option}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <FontAwesome5
-                name="coins"
-                size={27}
-                color="#F6C358"
-                style={styles.icon}
-              />
+              <CoinsIcon style={styles.icon} />
               <Text style={styles.optionText}>Dopuni kredit</Text>
             </View>
           </View>
           <View style={styles.option}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <FontAwesome5
-                name="gifts"
-                size={27}
-                color="#FF405C"
-                style={styles.icon}
-              />
+              <GiftIcon style={styles.icon} />
               <Text style={styles.optionText}>Iskoristi vaučer</Text>
             </View>
           </View>
           <View style={styles.option}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Feather
-                name="info"
-                size={27}
-                color="#1B92D5"
-                style={styles.icon}
-              />
+              <InfoIcon style={styles.icon} />
               <Text style={styles.optionText}>O novinarnici</Text>
             </View>
           </View>
           <View style={{ ...styles.option, backgroundColor: "#535353" }}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Entypo name="login" size={27} color="#fff" style={styles.icon} />
+              <LoginIcon style={styles.icon} />
               <Text style={{ ...styles.optionText, color: "#fff" }}>
                 Prijavi me
               </Text>
@@ -136,6 +102,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     paddingVertical: 13,
     paddingHorizontal: 15,
+    height: 55
   },
   optionText: {
     paddingLeft: 20,

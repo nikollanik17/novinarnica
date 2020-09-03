@@ -27,7 +27,7 @@ const Books = (props) => {
       >
         <ScrollView>
           <View>
-            <ScrollView horizontal style={styles.categories}>
+            <ScrollView horizontal style={styles.categories} showsHorizontalScrollIndicator={false}>
               <CategoryName
                 pressed={() => {
                   props.navigation.navigate("BooksCategory", {
@@ -60,7 +60,7 @@ const Books = (props) => {
 
           <View style={styles.singleCategory}>
             <PurpleCategoryName name="NAJNOVIJE" />
-            <ScrollView horizontal>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <BookComponent
                 name="NEKI DRUGI"
                 author="Ljiljana D. Ćuk"
@@ -86,7 +86,7 @@ const Books = (props) => {
           </View>
           <View style={styles.singleCategory}>
             <PurpleCategoryName name="NAJPRODAVANIJE" />
-            <ScrollView horizontal>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <BookComponent
                 name="NEKI DRUGI"
                 author="Ljiljana D. Ćuk"

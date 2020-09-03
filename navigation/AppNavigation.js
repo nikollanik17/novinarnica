@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, TextInput, Dimensions } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
-import {
-  Ionicons,
-  FontAwesome5,
-  AntDesign,
-  MaterialCommunityIcons,
-} from "@expo/vector-icons";
+// import {
+//   Ionicons,
+//   FontAwesome5,
+//   AntDesign,
+//   MaterialCommunityIcons,
+// } from "@expo/vector-icons";
 import { Platform } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -19,6 +19,7 @@ import Vise from "../screens/Vise";
 import BooksCategory from "../screens/BooksCategory";
 import SingleBook from "../screens/SingleBook";
 
+import SearchIcon from '../components/icons/SearchIcon';
 import NewspaperIc from "../components/icons/NewspaperIc";
 import BookIc from "../components/icons/BookIc";
 import DownloadIc from "../components/icons/DownloadIc";
@@ -44,14 +45,16 @@ const AppNavigation = () => {
                 alignItems: "center",
                 backgroundColor: "#f1f1f1",
                 borderRadius: 4,
+                paddingLeft: 20
               }}
             >
-              <Ionicons
+              {/* <Ionicons
                 style={{ padding: 10, paddingLeft: 20 }}
                 name="ios-search"
                 size={23}
                 color="#C7C7C7"
-              />
+              /> */}
+              <SearchIcon />
               <TextInput
                 style={{
                   flex: 1,
@@ -128,14 +131,16 @@ const BooksNavigation = () => {
                 alignItems: "center",
                 backgroundColor: "#f1f1f1",
                 borderRadius: 4,
+                paddingLeft: 20
               }}
             >
-              <Ionicons
+              {/* <Ionicons
                 style={{ padding: 10, paddingLeft: 20 }}
                 name="ios-search"
                 size={23}
                 color="#C7C7C7"
-              />
+              /> */}
+              <SearchIcon />
               <TextInput
                 style={{
                   flex: 1,
@@ -252,16 +257,15 @@ const TabNavigation = () => {
                         elevation: 8,
                       }
                     : {
+                        width: 80,
                         paddingTop: 20,
+                        paddingBottom: 5,
                         justifyContent: "center",
                         alignItems: "center",
                       }
                 }
               >
                 <IconType
-                  // name={iconName}
-                  // size={25}
-                  // color={focused ? "#292929" : "#eee"}
                   active={focused ? true : false}
                 />
                 <Text

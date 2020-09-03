@@ -9,12 +9,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import {
-  FontAwesome,
-  Ionicons,
-  EvilIcons,
-  AntDesign,
-} from "@expo/vector-icons";
+import FavoriteIcon from '../components/icons/FavoriteIcon';
+import SwipeDownIcon from '../components/icons/SwipeDownIcon';
 
 const SingleBook = (props) => {
   const [opisSelected, setOpisSelected] = useState(true);
@@ -38,7 +34,8 @@ const SingleBook = (props) => {
               <TouchableOpacity style={styles.favoriteBtn} activeOpacity={0.8}>
                 <View style={{ flexDirection: "row", alignItems: "center" }}>
                   <Text style={styles.favoriteText}>Omiljeno</Text>
-                  <EvilIcons name="heart" size={23} color="#E44545" />
+                  {/* <EvilIcons name="heart" size={23} color="#E44545" /> */}
+                  <FavoriteIcon />
                 </View>
               </TouchableOpacity>
             </View>
@@ -138,12 +135,13 @@ const SingleBook = (props) => {
         </View>
         <View style={{ flexDirection: "row", justifyContent: "flex-end" }}>
           <TouchableOpacity style={styles.seeMoreBtn} activeOpacity={0.8}>
-            <AntDesign
+            {/* <AntDesign
               name="doubleright"
               size={21}
               color="#fff"
               style={styles.arrows}
-            />
+            /> */}
+            <SwipeDownIcon />
             <Text style={styles.seeMoreText}>Vidi sve</Text>
           </TouchableOpacity>
         </View>
